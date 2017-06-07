@@ -13,7 +13,7 @@
     <div id="nav"></div>
     <div id="rootB"></div>
     <div class="container">
-    <div id="fullProfile"></div>
+      <div id="fullProfile"></div>
     <div id="gridDemo"></div>
     </div>
     <script type="text/babel">
@@ -26,6 +26,28 @@
         return dateOfBirth.day + '/' + dateOfBirth.month + '/' + dateOfBirth.year;
       }
 
+      function randomPercent() {
+        return Math.floor(Math.random() * 100);
+      }
+
+      const perc1 = {
+        name: 'Sales',
+        percentage: randomPercent(),
+        classList : 'c100 ' + 'p' + randomPercent()
+      };
+
+      const perc2 = {
+        name: 'Revenue',
+        percentage: randomPercent(),
+        classList : 'c100 ' + 'p' + randomPercent() + ' green'
+      };
+
+      const perc3 = {
+        name: 'Productivity',
+        percentage: randomPercent(),
+        classList : 'c100 ' + 'p' + randomPercent() + ' orange'
+      };
+
       const user = {
         firstName: 'Joao',
         lastName: 'Pratas'
@@ -35,12 +57,12 @@
         day: '19',
         month: '04',
         year: '1994'
-      }
+      };
 
       const image = {
         url:'profile.svg',
         name: 'Profile Picture'
-      }
+      };
 
       const menuTop = (
         <div>
@@ -58,11 +80,11 @@
         <div>
           <div className="col-2 col">
             <h2>Dashboard</h2>
-            <p>Here are your current stats:</p>
+            <h4>Here are your current stats:</h4>
             <div className="col-3">
-              <h2>Sales</h2>
-              <div className="c100 p65">
-              <span>65%</span>
+              <h2>{perc1.name}</h2>
+              <div className={perc1.classList}>
+              <span>{perc1.percentage}%</span>
                 <div className="slice">
                   <div className="bar"></div>
                   <div className="fill"></div>
@@ -70,9 +92,9 @@
             </div>
             </div>
             <div className="col-3">
-              <h2>Revenue</h2>
-              <div className="c100 p45 green">
-              <span>45%</span>
+              <h2>{perc2.name}</h2>
+              <div className={perc2.classList}>
+              <span>{perc2.percentage}%</span>
                 <div className="slice">
                   <div className="bar"></div>
                   <div className="fill"></div>
@@ -80,9 +102,9 @@
             </div>
             </div>
             <div className="col-3">
-              <h2>Productivity</h2>
-              <div className="c100 p90 orange">
-              <span>90%</span>
+              <h2>{perc3.name}</h2>
+              <div className={perc3.classList}>
+              <span>{perc3.percentage}%</span>
                 <div className="slice">
                   <div className="bar"></div>
                   <div className="fill"></div>
@@ -90,7 +112,7 @@
             </div>
             </div>
           </div>
-          <div className="col-2 col">
+          <div className="col-2">
             <h2>Notifications</h2>
             <p className="success">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             <p className="danger">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>

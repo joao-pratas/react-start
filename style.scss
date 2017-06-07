@@ -3,11 +3,10 @@
 $headFont : 'Montserrat', sans-serif;
 $mainFont : 'Nunito', sans-serif;
 $white : white;
-$defaultTransition : 'all 0.35s ease';
+$defaultTransition : all 0.35s ease;
 $green : #4db53c;
 $danger : #dd9d22;
 $important : #307bbb;
-
 
 body {
 	font-family: $mainFont;
@@ -33,6 +32,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $headFont;
 	line-height: 1.4;
 	display: block;
+}
+
+h4 {
+	line-height: 0.94;
 }
 
 a {
@@ -193,6 +196,7 @@ p {
 
 /*    DASHBOARD CHART    */
 
+
 .c100 {
-	font-size: 200px;
+	font-size: 185px;
 }

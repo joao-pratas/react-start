@@ -19,6 +19,9 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
   display: block; }
 
+h4 {
+  line-height: 0.94; }
+
 a {
   color: #4db53c;
   transition: all 0.35s ease;
@@ -138,6 +141,6 @@ p {
     opacity: 1; } }
 /*    DASHBOARD CHART    */
 .c100 {
-  font-size: 200px; }
+  font-size: 185px; }
 
 /*# sourceMappingURL=style.css.map */
