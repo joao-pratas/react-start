@@ -3,13 +3,15 @@
 $headFont : 'Montserrat', sans-serif;
 $mainFont : 'Nunito', sans-serif;
 $white : white;
-$defaultTransition : all 0.35s ease;
+$defaultTransition : 'all 0.35s ease';
+$green : #419637;
 
 
 body {
 	font-family: $mainFont;
 	margin: 0;
 	animation: fadeBody .5s forwards ease;
+	overflow-x: hidden !important;
 
 }
 
@@ -17,6 +19,18 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $headFont;
 	line-height: 1.4;
 	display: block;
+}
+
+a {
+	color: $green;
+	transition: all 0.35s ease;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $green;
+	transition: all 0.35s ease;
+	border-bottom: 1px solid $green;
 }
 
 #nav {
@@ -33,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 
 	#items {
 		float: right;
-		margin-right: 20%;
+		margin-right: 25%;
 	}
 
 	ul {
@@ -43,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 	li {
 		list-style: none;
 		display: inline-block;
-		margin: 15px 7px;
+		margin: 17px 9px;
 
 		a {
 			text-decoration: none;
@@ -52,8 +66,8 @@ h1, h2, h3, h4, h5, h6 {
 		}
 
 		a:hover {
-			border-bottom: 1px solid $white;
-			transition: $defaultTransition;
+			border-bottom: 1px solid $green;
+			color: $green;
 		}
 
 	}
@@ -83,6 +97,49 @@ p {
 	h2 {
 		display: inline-block;
 		float: right;
+	}
+}
+
+#gridDemo {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0;
+	padding: 5px;
+}
+
+.col-2 {
+	padding: 10px;
+	width: 46.2%;
+	margin: 10px 1%;
+	display: inline-block;
+	border: 1px solid black;
+
+	img {
+		padding: 20px;
+	}
+}
+
+.col-3 {
+	padding: 10px;
+	width: 29.6%;
+	margin: 10px 1%;
+	display: inline-block;
+	border: 1px solid black;
+
+	h2 {
+		text-align: center;
+	}
+}
+.col-4 {
+	padding: 10px;
+	width: 21.3%;
+	margin: 10px 1%;
+	display: inline-block;
+	border: 1px solid black;
+
+	h2, p {
+		text-align: center;
 	}
 }
 

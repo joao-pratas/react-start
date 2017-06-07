@@ -13,6 +13,7 @@
     <div id="rootB"></div>
     <div class="container">
     <div id="fullProfile"></div>
+    <div id="gridDemo"></div>
     </div>
     <script type="text/babel">
 
@@ -52,11 +53,53 @@
         </div>
       );
 
+      const gridDemo = (
+        <div>
+          <div className="col-2">
+            <h2>Dashboard</h2>
+            <p>2 columns</p>
+          </div>
+          <div className="col-2">
+            <h2>Notifications</h2>
+            <p>2 columns</p>
+          </div>
+          <div className="col-3">
+            <h2>Feature 1</h2>
+            <p>3 columns</p>
+          </div>
+          <div className="col-3">
+            <h2>Feature 2</h2>
+            <p>3 columns</p>
+          </div>
+          <div className="col-3">
+            <h2>Feature 3</h2>
+            <p>3 columns</p>
+          </div>
+          <div className="col-4">
+            <h2>Block 1</h2>
+            <p>4 columns</p>
+          </div>
+          <div className="col-4">
+            <h2>Block 2</h2>
+            <p><a href="">4 columns</a></p>
+          </div>
+          <div className="col-4">
+            <h2>Block 3</h2>
+            <p>4 columns</p>
+          </div>
+          <div className="col-4">
+            <h2>Block 4</h2>
+            <p>4 columns</p>
+          </div>
+        </div>
+      );
+
       const fullProfile = (
         <div className="profileIntro">
           <img src={image.url} alt={image.name} />
           <h1>Hello, {formatName(user)}!</h1>
           <h2>You were born on {formatDOB(dateOfBirth)}</h2>
+          <hr/>
         </div>
       );
 
@@ -80,6 +123,11 @@
       ReactDOM.render(
         menuTop,
         document.getElementById('nav')
+      );
+
+      ReactDOM.render(
+        gridDemo,
+        document.getElementById('gridDemo')
       );
 
       setInterval(tick, 1000);

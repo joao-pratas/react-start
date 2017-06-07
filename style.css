@@ -2,12 +2,23 @@
 body {
   font-family: "Nunito", sans-serif;
   margin: 0;
-  animation: fadeBody .5s forwards ease; }
+  animation: fadeBody .5s forwards ease;
+  overflow-x: hidden !important; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   line-height: 1.4;
   display: block; }
+
+a {
+  color: #419637;
+  transition: all 0.35s ease;
+  text-decoration: none; }
+
+a:hover {
+  color: #419637;
+  transition: all 0.35s ease;
+  border-bottom: 1px solid #419637; }
 
 #nav {
   width: 100% !important;
@@ -20,20 +31,20 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 120px; }
   #nav #items {
     float: right;
-    margin-right: 20%; }
+    margin-right: 25%; }
   #nav ul {
     list-style: none; }
   #nav li {
     list-style: none;
     display: inline-block;
-    margin: 15px 7px; }
+    margin: 17px 9px; }
     #nav li a {
       text-decoration: none;
       color: white;
       font-size: 24px; }
     #nav li a:hover {
-      border-bottom: 1px solid white;
-      transition: all 0.35s ease; }
+      border-bottom: 1px solid #419637;
+      color: #419637; }
 
 div .profileIntro {
   width: 100%;
@@ -52,6 +63,40 @@ p {
   #fullProfile h2 {
     display: inline-block;
     float: right; }
+
+#gridDemo {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 5px; }
+
+.col-2 {
+  padding: 10px;
+  width: 46.2%;
+  margin: 10px 1%;
+  display: inline-block;
+  border: 1px solid black; }
+  .col-2 img {
+    padding: 20px; }
+
+.col-3 {
+  padding: 10px;
+  width: 29.6%;
+  margin: 10px 1%;
+  display: inline-block;
+  border: 1px solid black; }
+  .col-3 h2 {
+    text-align: center; }
+
+.col-4 {
+  padding: 10px;
+  width: 21.3%;
+  margin: 10px 1%;
+  display: inline-block;
+  border: 1px solid black; }
+  .col-4 h2, .col-4 p {
+    text-align: center; }
 
 #pic img, #fullProfile img {
   max-width: 20%;
