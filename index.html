@@ -9,9 +9,11 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <div id="root"></div>
-    <div id="rootA"></div>
+    <div id="nav"></div>
     <div id="rootB"></div>
+    <div class="container">
+    <div id="fullProfile"></div>
+    </div>
     <script type="text/babel">
 
       function formatName(user) {
@@ -23,8 +25,8 @@
       }
 
       const user = {
-        firstName: 'Harper',
-        lastName: 'Perez'
+        firstName: 'Joao',
+        lastName: 'Pratas'
       };
 
       const dateOfBirth = {
@@ -33,14 +35,29 @@
         year: '1994'
       }
 
-      const element = (
-        <h1>
-          Hello, {formatName(user)}!
-        </h1>
+      const image = {
+        url:'profile.svg',
+        name: 'Profile Picture'
+      }
+
+      const menuTop = (
+        <div>
+          <img src="logo.svg" />
+          <ul id="items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
       );
 
-      const elA = (
-        <h2>You were born on {formatDOB(dateOfBirth)}</h2>
+      const fullProfile = (
+        <div className="profileIntro">
+          <img src={image.url} alt={image.name} />
+          <h1>Hello, {formatName(user)}!</h1>
+          <h2>You were born on {formatDOB(dateOfBirth)}</h2>
+        </div>
       );
 
       function tick() {
@@ -56,13 +73,13 @@
       }
 
       ReactDOM.render(
-        element,
-        document.getElementById('root')
+        fullProfile,
+        document.getElementById('fullProfile')
       );
 
       ReactDOM.render(
-        elA,
-        document.getElementById('rootA')
+        menuTop,
+        document.getElementById('nav')
       );
 
       setInterval(tick, 1000);
