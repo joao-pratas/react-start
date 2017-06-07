@@ -4,7 +4,9 @@ $headFont : 'Montserrat', sans-serif;
 $mainFont : 'Nunito', sans-serif;
 $white : white;
 $defaultTransition : 'all 0.35s ease';
-$green : #419637;
+$green : #4db53c;
+$danger : #dd9d22;
+$important : #307bbb;
 
 
 body {
@@ -13,6 +15,18 @@ body {
 	animation: fadeBody .5s forwards ease;
 	overflow-x: hidden !important;
 
+}
+
+.success {
+	color: $green;
+}
+
+.danger {
+	color: $danger;
+}
+
+.important {
+	color: $important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,6 +52,7 @@ a:hover {
 	height: 100px;
 	background: black;
 	position: fixed;
+	z-index: 100;
 
 	img {
 		padding: 10px 15px;
@@ -108,15 +123,24 @@ p {
 	padding: 5px;
 }
 
+.col {
+	display: table-cell;
+}
+
 .col-2 {
 	padding: 10px;
 	width: 46.2%;
 	margin: 10px 1%;
 	display: inline-block;
 	border: 1px solid black;
+	vertical-align: top;
 
 	img {
 		padding: 20px;
+	}
+	.col-3 {
+		width: 28%;
+		border: 0px solid;
 	}
 }
 
@@ -165,4 +189,10 @@ p {
 @keyframes fadeBody {
 	from{opacity: 0}
 	to{opacity: 1}
+}
+
+/*    DASHBOARD CHART    */
+
+.c100 {
+	font-size: 200px;
 }

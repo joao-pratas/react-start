@@ -6,6 +6,7 @@
     <script src="https://unpkg.com/react@latest/dist/react.js"></script>
     <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="circle.css">
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
@@ -55,13 +56,52 @@
 
       const gridDemo = (
         <div>
-          <div className="col-2">
+          <div className="col-2 col">
             <h2>Dashboard</h2>
-            <p>2 columns</p>
+            <p>Here are your current stats:</p>
+            <div className="col-3">
+              <h2>Sales</h2>
+              <div className="c100 p65">
+              <span>65%</span>
+                <div className="slice">
+                  <div className="bar"></div>
+                  <div className="fill"></div>
+                </div>
+            </div>
+            </div>
+            <div className="col-3">
+              <h2>Revenue</h2>
+              <div className="c100 p45 green">
+              <span>45%</span>
+                <div className="slice">
+                  <div className="bar"></div>
+                  <div className="fill"></div>
+                </div>
+            </div>
+            </div>
+            <div className="col-3">
+              <h2>Productivity</h2>
+              <div className="c100 p90 orange">
+              <span>90%</span>
+                <div className="slice">
+                  <div className="bar"></div>
+                  <div className="fill"></div>
+                </div>
+            </div>
+            </div>
           </div>
-          <div className="col-2">
+          <div className="col-2 col">
             <h2>Notifications</h2>
-            <p>2 columns</p>
+            <p className="success">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p className="danger">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p className="important">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p className="success">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p className="danger">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p className="important">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p className="success">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p className="danger">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p className="important">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p className="danger">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
           </div>
           <div className="col-3">
             <h2>Feature 1</h2>

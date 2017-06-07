@@ -5,26 +5,36 @@ body {
   animation: fadeBody .5s forwards ease;
   overflow-x: hidden !important; }
 
+.success {
+  color: #4db53c; }
+
+.danger {
+  color: #dd9d22; }
+
+.important {
+  color: #307bbb; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   line-height: 1.4;
   display: block; }
 
 a {
-  color: #419637;
+  color: #4db53c;
   transition: all 0.35s ease;
   text-decoration: none; }
 
 a:hover {
-  color: #419637;
+  color: #4db53c;
   transition: all 0.35s ease;
-  border-bottom: 1px solid #419637; }
+  border-bottom: 1px solid #4db53c; }
 
 #nav {
   width: 100% !important;
   height: 100px;
   background: black;
-  position: fixed; }
+  position: fixed;
+  z-index: 100; }
   #nav img {
     padding: 10px 15px;
     float: left;
@@ -43,8 +53,8 @@ a:hover {
       color: white;
       font-size: 24px; }
     #nav li a:hover {
-      border-bottom: 1px solid #419637;
-      color: #419637; }
+      border-bottom: 1px solid #4db53c;
+      color: #4db53c; }
 
 div .profileIntro {
   width: 100%;
@@ -71,14 +81,21 @@ p {
   margin: 0;
   padding: 5px; }
 
+.col {
+  display: table-cell; }
+
 .col-2 {
   padding: 10px;
   width: 46.2%;
   margin: 10px 1%;
   display: inline-block;
-  border: 1px solid black; }
+  border: 1px solid black;
+  vertical-align: top; }
   .col-2 img {
     padding: 20px; }
+  .col-2 .col-3 {
+    width: 28%;
+    border: 0px solid; }
 
 .col-3 {
   padding: 10px;
@@ -119,5 +136,8 @@ p {
     opacity: 0; }
   to {
     opacity: 1; } }
+/*    DASHBOARD CHART    */
+.c100 {
+  font-size: 200px; }
 
 /*# sourceMappingURL=style.css.map */
