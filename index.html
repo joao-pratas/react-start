@@ -50,14 +50,17 @@
 
       var styleP1 = {
         transform: 'rotate(' + perc1.percentage *3.6 + 'deg)',
+        WebkitTransform: 'rotate(' + perc1.percentage *3.6 + 'deg)'
       }
 
       var styleP2 = {
-        transform: 'rotate(' + perc2.percentage *3.6 + 'deg)'
+        transform: 'rotate(' + perc2.percentage *3.6 + 'deg)',
+        WebkitTransform: 'rotate(' + perc2.percentage *3.6 + 'deg)'
       }
 
       var styleP3 = {
-        transform: 'rotate(' + perc3.percentage *3.6 + 'deg)'
+        transform: 'rotate(' + perc3.percentage *3.6 + 'deg)',
+        WebkitTransform: 'rotate(' + perc3.percentage *3.6 + 'deg)'
       }
 
       const featureBlocks = {
@@ -112,7 +115,7 @@
             </div>
             <div className="col-3">
               <h2>{perc2.name}</h2>
-              <div className={'c100 ' + 'p'+ perc2.percentage + ' ' + perc2.colour}>
+              <div className={'c100 ' +  perc2.colour}>
               <span>{perc2.percentage}%</span>
                 <div className="slice">
                   <div className="bar" style={styleP2}></div>
@@ -122,7 +125,7 @@
             </div>
             <div className="col-3">
               <h2>{perc3.name}</h2>
-              <div className={'c100 ' + 'p'+ perc3.percentage + ' ' + perc3.colour}>
+              <div className={'c100 ' +  perc3.colour}>
               <span>{perc3.percentage}%</span>
                 <div className="slice">
                   <div className="bar" style={styleP3}></div>
@@ -146,7 +149,7 @@
           </div>
           <div className="col-3">
             <h2>{perc1.name}</h2>
-              <div className={'c100 ' + 'p'+ perc1.percentage + ' ' + perc1.colour}>
+              <div className={'c100 ' +  perc1.colour}>
               <span>{perc1.percentage}%</span>
                 <div className="slice">
                   <div className="bar" style={styleP1}></div>
@@ -156,7 +159,7 @@
           </div>
           <div className="col-3">
             <h2>{perc2.name}</h2>
-              <div className={'c100 ' + 'p'+ perc2.percentage + ' ' + perc2.colour}>
+              <div className={'c100 ' +  perc2.colour}>
               <span>{perc2.percentage}%</span>
                 <div className="slice">
                   <div className="bar" style={styleP2}></div>
@@ -166,7 +169,7 @@
           </div>
           <div className="col-3">
             <h2>{perc3.name}</h2>
-              <div className={'c100 ' + 'p'+ perc3.percentage + ' ' + perc3.colour}>
+              <div className={'c100 ' +  perc3.colour}>
               <span>{perc3.percentage}%</span>
                 <div className="slice">
                   <div className="bar" style={styleP3}></div>
