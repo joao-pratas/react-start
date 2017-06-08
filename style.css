@@ -117,6 +117,13 @@ p {
   border: 1px solid black; }
   .col-4 h2, .col-4 p {
     text-align: center; }
+  .col-4 img {
+    width: 170px;
+    height: auto;
+    display: block;
+    padding: 5px;
+    margin: 0 auto;
+    float: none; }
 
 #pic img, #fullProfile img {
   max-width: 20%;
@@ -141,6 +148,8 @@ p {
     opacity: 1; } }
 /*    DASHBOARD CHART    */
 .c100 {
-  font-size: 185px; }
+  font-size: 185px;
+  float: none;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

@@ -33,20 +33,39 @@
       const perc1 = {
         name: 'Sales',
         percentage: randomPercent(),
-        classList : 'c100 ' + 'p' + randomPercent()
+        colour:""
       };
 
       const perc2 = {
         name: 'Revenue',
         percentage: randomPercent(),
-        classList : 'c100 ' + 'p' + randomPercent() + ' green'
+        colour:"green"
       };
 
       const perc3 = {
         name: 'Productivity',
         percentage: randomPercent(),
-        classList : 'c100 ' + 'p' + randomPercent() + ' orange'
+        colour : 'orange'
       };
+
+      var styleP1 = {
+        transform: 'rotate(' + perc1.percentage *3.6 + 'deg)',
+      }
+
+      var styleP2 = {
+        transform: 'rotate(' + perc2.percentage *3.6 + 'deg)'
+      }
+
+      var styleP3 = {
+        transform: 'rotate(' + perc3.percentage *3.6 + 'deg)'
+      }
+
+      const featureBlocks = {
+        feature1 : 'dollar.svg',
+        feature2 : 'money.svg',
+        feature3 : 'target.svg',
+        feature4 : 'tech.svg'
+      }
 
       const user = {
         firstName: 'Joao',
@@ -83,30 +102,30 @@
             <h4>Here are your current stats:</h4>
             <div className="col-3">
               <h2>{perc1.name}</h2>
-              <div className={perc1.classList}>
+              <div className={'c100 ' +  perc1.colour}>
               <span>{perc1.percentage}%</span>
                 <div className="slice">
-                  <div className="bar"></div>
+                  <div className="bar" style={styleP1}></div>
                   <div className="fill"></div>
                 </div>
-            </div>
+              </div>
             </div>
             <div className="col-3">
               <h2>{perc2.name}</h2>
-              <div className={perc2.classList}>
+              <div className={'c100 ' + 'p'+ perc2.percentage + ' ' + perc2.colour}>
               <span>{perc2.percentage}%</span>
                 <div className="slice">
-                  <div className="bar"></div>
+                  <div className="bar" style={styleP2}></div>
                   <div className="fill"></div>
                 </div>
             </div>
             </div>
             <div className="col-3">
               <h2>{perc3.name}</h2>
-              <div className={perc3.classList}>
+              <div className={'c100 ' + 'p'+ perc3.percentage + ' ' + perc3.colour}>
               <span>{perc3.percentage}%</span>
                 <div className="slice">
-                  <div className="bar"></div>
+                  <div className="bar" style={styleP3}></div>
                   <div className="fill"></div>
                 </div>
             </div>
@@ -126,32 +145,50 @@
             <p className="danger">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
           </div>
           <div className="col-3">
-            <h2>Feature 1</h2>
-            <p>3 columns</p>
+            <h2>{perc1.name}</h2>
+              <div className={'c100 ' + 'p'+ perc1.percentage + ' ' + perc1.colour}>
+              <span>{perc1.percentage}%</span>
+                <div className="slice">
+                  <div className="bar" style={styleP1}></div>
+                  <div className="fill"></div>
+                </div>
+              </div>
           </div>
           <div className="col-3">
-            <h2>Feature 2</h2>
-            <p>3 columns</p>
+            <h2>{perc2.name}</h2>
+              <div className={'c100 ' + 'p'+ perc2.percentage + ' ' + perc2.colour}>
+              <span>{perc2.percentage}%</span>
+                <div className="slice">
+                  <div className="bar" style={styleP2}></div>
+                  <div className="fill"></div>
+                </div>
+              </div>
           </div>
           <div className="col-3">
-            <h2>Feature 3</h2>
-            <p>3 columns</p>
+            <h2>{perc3.name}</h2>
+              <div className={'c100 ' + 'p'+ perc3.percentage + ' ' + perc3.colour}>
+              <span>{perc3.percentage}%</span>
+                <div className="slice">
+                  <div className="bar" style={styleP3}></div>
+                  <div className="fill"></div>
+                </div>
+              </div>
           </div>
           <div className="col-4">
             <h2>Block 1</h2>
-            <p>4 columns</p>
+            <img src={featureBlocks.feature1} />
           </div>
           <div className="col-4">
             <h2>Block 2</h2>
-            <p><a href="">4 columns</a></p>
+            <img src={featureBlocks.feature2} />
           </div>
           <div className="col-4">
             <h2>Block 3</h2>
-            <p>4 columns</p>
+            <img src={featureBlocks.feature3} />
           </div>
           <div className="col-4">
             <h2>Block 4</h2>
-            <p>4 columns</p>
+            <img src={featureBlocks.feature4} />
           </div>
         </div>
       );
