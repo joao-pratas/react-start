@@ -37,7 +37,7 @@ a:hover {
   height: 100px;
   background: black;
   position: fixed;
-  z-index: 100; }
+  z-index: 130; }
   #nav img {
     padding: 10px 15px;
     float: left;
